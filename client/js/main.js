@@ -267,6 +267,32 @@ async function downloadCustomFormat(formatId) {
 }
 
 // ===== UTILITY FUNCTIONS =====
+function extractVideoId(url) {
+  const patterns = [
+    /(?:youtube\.com\/watch\?v=|youtu\.be\/)([^&\s]+)/,
+    /youtube\.com\/embed\/([^&\s]+)/,
+    /youtube\.com\/v\/([^&\s]+)/,
+  ];
+
+  for (let pattern of patterns) {
+    const match = url.match(pattern);
+    if (match) return match[1];
+  }
+  return null;
+}
+
+function formatDuration(seconds) {
+  if (!seconds) return "Unknown";
+  const hours = Math.floor(seconds / 3600);
+  const minutes = Math.floor((seconds % 3600) / 60);
+  const secs = seconds % 60;
+
+  if (hours > 0) {
+    return `${hours}:${minutes.toString().padStart(2, "0")}:${secs.toString().padStart(2, "0")}`;
+  }
+  return `${minutes}:${secs.toString().padStart(2, "0")}`;
+}
+
 function formatNumber(num) {
   if (!num) return "0";
   return num.toLocaleString();
