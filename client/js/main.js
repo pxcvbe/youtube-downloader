@@ -265,3 +265,26 @@ async function downloadAudio() {
 async function downloadCustomFormat(formatId) {
   await downloadQuick(formatId);
 }
+
+// ===== UTILITY FUNCTIONS =====
+function formatNumber(num) {
+  if (!num) return "0";
+  return num.toLocaleString();
+}
+
+function showError(message) {
+  errorMsg.textContent = message;
+  error.classList.remove("hidden");
+  success.classList.add("hidden");
+}
+
+function showSuccess(message) {
+  successMsg.textContent = message;
+  success.classList.remove("hidden");
+  error.classList.add("hidden");
+}
+
+function hideMessages() {
+  error.classList.add("hidden");
+  success.classList.add("hidden");
+}
