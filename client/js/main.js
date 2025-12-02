@@ -221,7 +221,7 @@ async function downloadQuick(format) {
 }
 
 async function downloadAudio() {
-  if (currentVideoUrl) {
+  if (!currentVideoUrl) {
     showError("Please fetch video info first!");
     return;
   }
