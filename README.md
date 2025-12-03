@@ -27,7 +27,7 @@ Aplikasi web untuk download video YouTube dengan interface modern dan backend AP
 ```
 youtube-downloader/
 │
-├── backend/                          # Backend API
+├── api-server/                      # Backend API
 │   ├── app/
 │   │   ├── __init__.py              # Flask app initialization
 │   │   ├── routes.py                # API endpoints
@@ -41,7 +41,7 @@ youtube-downloader/
 │   ├── railway.json                 # Railway configuration
 │   └── run.py                       # Application entry point
 │
-└── frontend/                        # Frontend web app
+└── client/                          # Frontend web app
     ├── css/
     │   └── style.css                # Custom styles
     ├── js/
