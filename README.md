@@ -2,12 +2,12 @@
 
 Aplikasi web untuk download video YouTube dengan interface modern dan backend API yang powerful menggunakan [`yt-dlp`](https://github.com/yt-dlp/yt-dlp).
 
-<img width="1920" height="1398" alt="image" src="https://github.com/user-attachments/assets/66ba7986-82c6-4daa-8be3-9d4793eab76e" />
-
 ![Python](https://img.shields.io/badge/Python-3.14-blue)
 ![Flask](https://img.shields.io/badge/Flask-3.0-green)
 ![yt--dlp](https://img.shields.io/badge/yt--dlp-2025.11.12-red)
 ![License](https://img.shields.io/badge/License-MIT-yellow)
+
+<img width="1920" height="1398" alt="image" src="https://github.com/user-attachments/assets/66ba7986-82c6-4daa-8be3-9d4793eab76e" />
 
 ## 🌟 Features
 
